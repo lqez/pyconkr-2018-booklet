@@ -1,96 +1,30 @@
 from jinja2 import Template
+import preset
 import subprocess
 
 with open('pyconkr-2018.html') as file:
     template = Template(file.read())
 
-sponsor_levels = [
-    {
-        'name': '다이아몬드',
-        'sponsors': [
-            {
-                'name': '뱅크샐러드',
-            },
-            {
-                'name': '하이퍼커넥트',
-            },
-        ],
-    },
-    {
-        'name': '사파이어',
-        'sponsors': [
-            {
-                'name': '루닛',
-            },
-        ],
-    },
-    {
-        'name': '플래티넘',
-        'sponsors': [
-            {
-                'name': '알지피코리아',
-            },
-            {
-                'name': '패스트캠퍼스',
-            },
-            {
-                'name': '구글',
-            },
-        ],
-    },
-    {
-        'name': '골드',
-        'sponsors': [
-            {
-                'name': 'ICON',
-            },
-            {
-                'name': '리디 주식회사',
-            },
-            {
-                'name': '센드버드',
-            },
-            {
-                'name': '라인',
-            },
-            {
-                'name': '스포카',
-            },
-            {
-                'name': '코인원',
-            },
-            {
-                'name': 'JetBrains',
-            },
-            {
-                'name': '래블업',
-            },
-        ],
-    },
-    {
-        'name': '실버',
-        'sponsors': [
-            {
-                'name': '피플펀드',
-            },
-            {
-                'name': '번개장터',
-            },
-            {
-                'name': 'HBSmith',
-            },
-            {
-                'name': 'MyMusicTaste',
-            },
-            {
-                'name': '스타트링크',
-            },
-        ],
-    },
-]
+for sponsor_level in preset.sponsor_levels:
+    for sponsor in sponsor_level['sponsors']:
+        if sponsor.get('desc'):
+            sponsor['desc'] = sponsor['desc'].split('\n')
+
+patrons = []
+for patron in preset.patrons:
+    patron = patron.rsplit('/', 1)
+    if len(patron) == 2:
+        patrons.append({'name': patron[0], 'org': patron[1]})
+    else:
+        patrons.append({'name': patron[0]})
+
 page = template.render({
-    'sponsor_levels': sponsor_levels,
+    'coc': preset.coc,
+    'sponsor_levels': preset.sponsor_levels,
+    'staffs': preset.staffs,
+    'volunteers': preset.volunteers,
+    'patrons': patrons,
 })
 
-p = subprocess.Popen(["prince", "-", "-o", "out.pdf"], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+p = subprocess.Popen(["prince", "-", "-o", "pyconkr-2018-booklet-test.pdf"], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
 outs, errs = p.communicate(page.encode("utf-8"))
