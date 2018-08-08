@@ -41,7 +41,7 @@
         <li><a href="#pyconkr">행사 안내</a></li>
         <li><a href="#venue">현장 안내</a></li>
         <li><a href="#keynote">키노트 안내</a></li>
-        <li><a href="#program">프로그램 시간표</a></li>
+        <li><a href="#program">발표 프로그램 목록</a></li>
         <li><a href="#sponsors">후원사 소개</a></li>
         <li><a href="#patrons">개인 후원자 소개</a></li>
         <li><a href="#staff">준비위원회 및 자원봉사자</a></li>
@@ -50,9 +50,9 @@
 
     <div id="about">
       <h1 class="chapter">파이콘 한국 2018</h1>
-      <h2>행사 소개</h2>
       <p>파이콘은 세계 각국의 파이썬 프로그래밍 언어 커뮤니티에서 주관하는 비영리 콘퍼런스입니다.</p>
       <p>한국에서는 처음으로 열린 파이콘 한국 2014를 시작으로 파이콘 한국 준비위원회는 건강한 국내 파이썬 생태계에 지속적인 보탬이 되고자, 커뮤니티 멤버들의 자발적인 봉사로 운영되고 있습니다. 2017년에는 저희 준비위원회가 한국에서 파이콘을 시작했던 처음의 마음가짐으로 세션뿐 아니라 더 다양한 프로그램으로 준비하였습니다. 더욱 다양한 참가자들과 함께 새로운 기술과 정보를 공유하고 서로 교류할 수 있는 행사가 되기를 희망합니다.</p>
+      <img src="images/programs/pyconkr2017-5.jpg">
       <h2>파이콘은 다른 개발자 행사와 <br>무엇이 다른가요?</h2>
       <p>파이콘 한국은 커뮤니티 주관으로 이뤄지는 비영리 개발자 대상 행사로, 타 기업 및 기관에서 개최하는 개발자 행사와는 성격이 다릅니다. 발표자와 튜토리얼 진행자를 포함하여, 자원봉사자와 준비위원회 담당자 등 모든 인원이 금전적 이득 없이 순수히 오픈소스 프로그래밍 언어인 파이썬의 저변 확대와 커뮤니티 활성화를 위해 진행하는 행사입니다.</p>
       <h2>슬로건 – Dive into Diversity</h2>
@@ -65,27 +65,82 @@
         <strong>이메일</strong> / support@pycon.kr<br>
         <strong>페이스북</strong> / https://www.facebook.com/pyconkorea/
       </p>
+      <img src="images/programs/pyconkr2017-2.jpg" class="bottom">
     </div>
 
     <div id="coc">
       <h1 class="chapter">파이콘 한국 행동강령</h1>
+      <img src="images/programs/pyconkr2017-1.jpg">
       {{ coc|safe }}
     </div>
 
     <div id="pyconkr">
       <h1 class="chapter">행사 안내</h1>
+      {% for program in programs %}
+      <div class="program {{ program.id }}">
+        <img src="images/programs/{{ program.id }}.jpg">
+        <h2>{{ program.name }}</h2>
+        <span>{{ program.date }}</h2>
+        <p>{{ program.desc|safe }}</p>
+      </div>
+      {% endfor %}
     </div>
 
     <div id="venue">
       <h1 class="chapter">현장 안내</h1>
+      <h2>코엑스, 그랜드볼룸</h2>
+      <span>서울시 강남구 영동대로 513</span>
+      <p>파이콘 한국 2018의 모든 프로그램은 행사 기간내 코엑스 그랜드볼룸에서 열립니다.</p>
+      <p>장소 안내: http://www.coex.co.kr/</p>
+      <h3>그랜드볼룸 1층</h3>
+      <p>101호부터 105호까지 키노트와 세션 프로그램이 진행되며, 로비에서는 후원사 부스와 운동 프로그램이 운영됩니다.</p>
+      <h3>그랜드볼룸 2층</h3>
+      <p>201호에서는 세션 프로그램이 진행되며, 나머지 공간에서는 다음의 프로그램이 진행됩니다. 각 프로그램에 대한 자세한 안내는 파이콘 한국 홈페이지를 참고해주세요.</p>
+      <ul>
+        <li>영코더</li>
+        <li>아이돌봄</li>
+        <li>스프린트</li>
+        <li>튜토리얼</li>
+        <li>열린공간</li>
+      </ul>
     </div>
 
     <div id="keynote">
       <h1 class="chapter">키노트 안내</h1>
+      <p>파이콘 한국 2018의 키노트 프로그램과 연사를 소개합니다.<br>키노트는 8월 18일(토) 코엑스 그랜드볼룸 1층의 모든 구역에서 진행됩니다.</p>
+      {% for keynote in keynotes %}
+      <div class="keynote">
+        <h2>{{ keynote.title }}</h2>
+        <span>{{ keynote.date }}</span>
+        <p>{{ keynote.desc }}</p>
+        <div class="speaker">
+          <img src="images/speakers/{{ keynote.speaker.photo }}">
+          <h4>{{ keynote.speaker.name }}</h4>
+          <span>{{ keynote.speaker.link }}</span>
+          <p>{{ keynote.speaker.bio }}</p>
+        </div>
+      </div>
+      {% endfor %}
     </div>
 
     <div id="program">
-      <h1 class="chapter">프로그램 시간표</h1>
+      <h1 class="chapter">발표 프로그램 목록</h1>
+      <p>
+        난이도 구분: 
+        <span class="session-level level-1">1</span> 초급자 대상 
+        <span class="session-level level-2">2</span> 중급자 대상
+        <span class="session-level level-3">3</span> 숙련자 대상
+      </p>
+      {% for category in session_categories %}
+      <h2 class="category"{% if category.pagebreak %} style="page-break-before: always"{% endif %}>{{ category.name }}</h2>
+      {% for session in category.sessions %}
+      <div class="session">
+        <h4>{{ session.name }} <span class="session-level level-{{ session.level }}">{{ session.level }}</span></h4>
+        <span>{{ session.location }}호 / {{ session.date }} / {{ session.time }}</span>
+        <p class="desc"><strong>{{ session.speaker }}</strong> – {{ session.desc }}</p>
+      </div>
+      {% endfor %}
+      {% endfor %}
     </div>
 
     <div id="sponsors">
@@ -118,7 +173,7 @@
     
     <div id="patrons">
       <h1 class="chapter">개인 후원자 소개</h1>
-      <p>파이콘 한국 2018 을 후원해주신 개인 후원자 분들의 명단입니다. 후원해주셔서 감사합니다.</p>
+      <p>파이콘 한국 2018 을 후원해주신 개인 후원자 분들의 명단입니다.<br>후원해주셔서 감사합니다.</p>
       {% for patron in patrons %}
       <p class="patron">{{ patron.name|safe }}{% if patron.org %}<span class="org">{{ patron.org }}</span>{% endif %}</p>
       {% endfor %}
@@ -126,6 +181,7 @@
 
     <div id="staff">
       <h1 class="chapter">준비위원회 및 자원봉사자</h1>
+      <img src="images/programs/pyconkr2017-6.jpg">
       <h2>파이콘 한국 준비위원회</h2>
       <p>파이콘 한국 준비위원회는 2014년 조직되어, 올해 다섯 번째 한국에서의 파이콘 행사를 준비하고 있습니다.</p>
       <p>준비위원회는 매년 신규 멤버를 모집하는 파이콘을 사랑하는 사람들의 열린 모임입니다. 관심있는 분들의 많은 지원과 참여 부탁드립니다. (가나다순)</p>
@@ -137,6 +193,7 @@
       <div class="volunteers">
         {% for _ in volunteers %}<span>{{ _ }}</span>{% endfor %}
       </div>
+      <img src="images/programs/pyconkr2017-4.jpg" class="bottom">
     </div>
 
     <div id="rightwing" class="wingpage">

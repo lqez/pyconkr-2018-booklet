@@ -24,6 +24,9 @@ page = template.render({
     'staffs': preset.staffs,
     'volunteers': preset.volunteers,
     'patrons': patrons,
+    'keynotes': preset.keynotes,
+    'programs': preset.programs,
+    'session_categories': preset.session_categories,
 })
 
 p = subprocess.Popen(["prince", "-", "-o", "pyconkr-2018-booklet-test.pdf"], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
