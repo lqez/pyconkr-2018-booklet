@@ -615,6 +615,16 @@ session_categories = [
                 'desc': ' 7만여종의 화장품에 9만여명의 소비자가 남긴 리얼 리뷰 2백만여개의 리뷰를 분석하고 화장품들의 특성과 그 화장품을 이용하는 사람들을 이해하는 과정에 대해 소개합니다. Topic modeling 과 word embedding 기술을 소개하고, 리뷰 데이터를 어떻게 모델링하는지 데모합니다. 그리고 데이터 분석가 또는 프로그래머와, 도메인 전문가 사이에 반복적인 시행착오의 고통을 줄여주기 위한 데이터의 인터렉티브 시각화를 시연합니다.',
             },
             {
+                'name': '머신러닝으로 치매 정복하기',
+                'speaker': '박세진',
+                'id': 'gnoses2',
+                'date': '8월 18일',
+                'time': '13:00 - 13:25',
+                'location': '104',
+                'level': 2,
+                'desc': 'MRI 뇌 영상에서 파이썬과 텐서플로우를 이용하여 치매 관련 영역을 찾고, 치매 위험도를 예측하는 알고리즘을 개발하면서 겪은 각종 난관들과 이를 극복한 과정들을 소개합니다.',
+            },
+            {
                 'name': '법률 네트워크 분석: 30년간의 변화 Changes in legal citation network over 30 years',
                 'speaker': '김재윤',
                 'id': 'suitbread',
@@ -634,16 +644,6 @@ session_categories = [
                 'language': 'English',
                 'level': 1,
                 'desc': 'This presentation consists of two parts: Physical, non-statistical data analysis based on CNAO-built programs / Understanding of data in general, by historical-to-modern examples including machine learning and data science.',
-            },
-            {
-                'name': '머신러닝으로 치매 정복하기',
-                'speaker': '박세진',
-                'id': 'gnoses2',
-                'date': '8월 18일',
-                'time': '13:00 - 13:25',
-                'location': '104',
-                'level': 2,
-                'desc': 'MRI 뇌 영상에서 파이썬과 텐서플로우를 이용하여 치매 관련 영역을 찾고, 치매 위험도를 예측하는 알고리즘을 개발하면서 겪은 각종 난관들과 이를 극복한 과정들을 소개합니다.',
             },
             {
                 'name': '땀내를 줄이는 Data와 Feature 다루기',
@@ -735,6 +735,7 @@ session_categories = [
     },
     {
         'name': 'Computer Vision',
+        'pagebreak': True,
         'sessions': [
             {
                 'name': '동물 홍채인식부터 서버까지 python으로 만들기',
@@ -906,7 +907,6 @@ session_categories = [
     },
     {
         'name': 'Web Service',
-        'pagebreak': True,
         'sessions': [
             {
                 'name': '40만명이 쓰는 Django channels 채팅서버, 우리는 어떻게 만들었나?',
