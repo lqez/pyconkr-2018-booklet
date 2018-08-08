@@ -66,6 +66,10 @@ body {
   font-size: 11pt;
 }
 
+* {
+  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+}
+
 /* get the title of the current chapter - this will be the content of the h1 
 reset figure counter as figures start from 1 in each chapter */
 h1 {
