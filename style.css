@@ -489,7 +489,7 @@ h3.level {
   border-left: 8pt solid black;
   line-height: 1;
   padding: 5pt 8pt;
-  margin: 30px 0 10px;
+  margin: 5px 0 15px;
 }
 
 .session {
@@ -500,7 +500,7 @@ h3.level {
   line-height: 1.4;
 }
 
-.session-level {
+.session-label {
   position: relative;
   top: -1px;
   font-size: 8pt;
@@ -525,12 +525,16 @@ h3.level {
   background: #ED2F39;
 }
 
+.lang-eng {
+  background: #2F77FD;
+}
+
 .session span {
   font-size: 9pt;
   color: #444;
 }
 
 .session p {
-  margin-left: 24px;
+  margin-left: 30px;
   margin-bottom: 40px;
 }

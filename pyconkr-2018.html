@@ -54,7 +54,7 @@
       <p>한국에서는 처음으로 열린 파이콘 한국 2014를 시작으로 파이콘 한국 준비위원회는 건강한 국내 파이썬 생태계에 지속적인 보탬이 되고자, 커뮤니티 멤버들의 자발적인 봉사로 운영되고 있습니다. 2018년에는 저희 준비위원회가 한국에서 파이콘을 시작했던 처음의 마음가짐으로 세션뿐 아니라 더 다양한 프로그램으로 준비하였습니다. 더욱 다양한 참가자들과 함께 새로운 기술과 정보를 공유하고 서로 교류할 수 있는 행사가 되기를 희망합니다.</p>
       <img src="images/programs/pyconkr2017-5.jpg">
       <h2>파이콘은 다른 개발자 행사와 <br>무엇이 다른가요?</h2>
-      <p>파이콘 한국은 커뮤니티 주관으로 이뤄지는 비영리 개발자 대상 행사로, 타 기업 및 기관에서 개최하는 개발자 행사와는 성격이 다릅니다. 발표자와 튜토리얼 진행자를 포함하여, 자원봉사자와 준비위원회 담당자 등 모든 인원이 금전적 이득 없이 순수히 오픈소스 프로그래밍 언어인 파이썬의 저변 확대와 커뮤니티 활성화를 위해 진행하는 행사입니다.</p>
+      <p>파이콘 한국은 커뮤니티 주관으로 이뤄지는 개발자 대상 비영리 행사로, 타 기업 및 기관에서 개최하는 개발자 행사와는 성격이 다릅니다. 발표자와 튜토리얼 진행자를 포함하여, 자원봉사자와 준비위원회 담당자 등 모든 인원이 금전적 이득 없이 순수히 오픈소스 프로그래밍 언어인 파이썬의 저변 확대와 커뮤니티 활성화를 위해 진행하는 행사입니다.</p>
       <h2>슬로건 – Dive into Diversity</h2>
       <p>파이콘 한국 2018은 “Dive into Diversity – 다양성에 빠지다” 라는 슬로건으로 진행됩니다.</p>
       <p>파이썬 커뮤니티는 다양한 기술, 개성 및 경험을 갖추고 있는 전세계 구성원들이 서로의 차이를 존중하고, 다른 견해에 귀를 기울이며, 올바른 상호작용을 통해 성장하는 커뮤니티를 지향해왔습니다.</p>
@@ -126,18 +126,27 @@
     <div id="program">
       <h1 class="chapter">발표 프로그램 목록</h1>
       <p>
-        난이도 구분: 
-        <span class="session-level level-1">1</span> 초급자 대상 
-        <span class="session-level level-2">2</span> 중급자 대상
-        <span class="session-level level-3">3</span> 숙련자 대상
+        발표 프로그램은 컨퍼런스 당일 현장과 발표자 사정상 시간, 장소, 내용 등이 사전 안내 없이 변경될 수 있습니다. 행사장에 설치된 프로그램 시간표와 홈페이지를 통해 변경 사항을 확인하실 수 있습니다.</p>
       </p>
+      <p>
+        발표 구분: 
+        <span class="session-label level-1">1</span> 초급자 대상 
+        <span class="session-label level-2">2</span> 중급자 대상
+        <span class="session-label level-3">3</span> 숙련자 대상
+        <span class="session-label lang-eng">E</span> 영어 발표
+      </p>
+      <br>
+      <br>
       {% for category in session_categories %}
       <h2 class="category"{% if category.pagebreak %} style="page-break-before: always"{% endif %}>{{ category.name }}</h2>
       {% for session in category.sessions %}
       <div class="session">
-        <h4>{{ session.name }} <span class="session-level level-{{ session.level }}">{{ session.level }}</span></h4>
+        <h4>{{ session.name }}
+          <span class="session-label level-{{ session.level }}">{{ session.level }}</span>
+          {% if session.language == 'English' %}<span class="session-label lang-eng">E</span>{% endif %}
+        </h4>
         <span>{{ session.location }}호 / {{ session.date }} / {{ session.time }}</span>
-        <p class="desc"><strong>{{ session.speaker }}</strong> – {{ session.desc }}</p>
+        <p class="desc" style="{{ session.css }}"><strong>{{ session.speaker }}</strong> – {{ session.desc }}</p>
       </div>
       {% endfor %}
       {% endfor %}
