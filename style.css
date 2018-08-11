@@ -5,6 +5,9 @@
 @page {
   size: 5.5in 8.5in;  
   margin: 60pt 60pt;
+  marks: crop;
+  prince-bleed: 3mm;
+  prince-trim: 3mm;
 }
 
 img {
@@ -201,6 +204,10 @@ a.xref:after {
   size: 5.5in 8.5in;  
   margin: 0;
   background: linear-gradient(90deg, #491faf, #771592, #a20a77);
+  background-position: center;
+  background-size: 104%;
+  background-repeat: no-repeat;
+	background-repeat: repeat-none;
 }
 
 #frontcover h2 {
@@ -295,6 +302,10 @@ a.xref:after {
 
   size: 5.5in 8.5in;  
   background: linear-gradient(-90deg, #491faf, #771592, #a20a77);
+  background-position: center;
+  background-size: 104%;
+  background-repeat: no-repeat;
+	background-repeat: repeat-none;
 }
 
 .wingpage {
@@ -535,6 +546,6 @@ h3.level {
 }
 
 .session p {
-  margin-left: 30px;
-  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-bottom: 36px;
 }
