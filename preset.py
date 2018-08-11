@@ -242,9 +242,8 @@ Python의 높은 생산성을 통하여 성장한 만큼 PyCon Korea 2018을 통
             {
                 'name': 'HBSmith',
                 'img': 'hbsmith.svg',
-                'desc': '''에이치비스미스는 백엔드 서버 전문가 2명이 2016년 9월에 창업한 B2B, 서버 장애 모니터링(APM) SaaS 서비스 'hbsmith'를 만드는 기술 스타트업입니다.
-'hbsmith' 서비스는 AWS 인프라에서 100% Python3 로 작성된 백엔드 서버들로 운영되고 있으며, 다양한 특장점을 가지고 있습니다.
-2018년에 AWS 기술파트너로 선정된 에이치비스미스는 앞으로도 다양한 분야에 Python을 활발히 사용하면서, Python 커뮤니티와 함께 성장하고 싶습니다.''',
+                'desc': '''HBSmith는 2016년 9월에 창업한 B2B, 서버 장애 모니터링, SaaS 서비스 'hbsmith'를 만드는 기술 스타트업입니다.
+'hbsmith' 서비스는 100% Python 3 로 작성된 백엔드 서버들로 운영되고 있으며, 서버 agent 설치나 code 수정 없이 바로 사용 가능한 black box 모니터링 서비스입니다. HBSmith는 앞으로도 다양한 분야에 Python을 활발히 사용할 예정입니다.''',
             },
             {
                 'name': '마이뮤직테이스트',
@@ -831,7 +830,7 @@ session_categories = [
                 'id': 'jckdotim',
                 'date': '8월 18일',
                 'time': '13:00 - 13:25',
-                'location': '201',
+                'location': '202',
                 'level': 3,
                 'desc': '네코유메(https://nekoyu.me/)는 파이썬으로 개발한 블록체인 기반 롤플레잉 게임입니다. 게임에 특화된 블록체인이 필요했기에, 기존 퍼블릭 체인을 포크하지 않고 직접 블록체인을 개발하였습니다.',
             },
@@ -915,7 +914,7 @@ session_categories = [
                 'id': '5on_3un_7oo',
                 'date': '8월 18일',
                 'time': '13:40 - 14:20',
-                'location': '201',
+                'location': '202',
                 'level': 2,
                 'desc': '많이 사용되고 있는 Django의 프로젝트임에도 상대적으로 알려지지 않은 Channels를 소개하고 싶습니다. 최근에 Channels2가 릴리즈 되었기 때문에 좋은 타이밍이라고 생각합니다.',
             },
@@ -946,7 +945,7 @@ session_categories = [
                 'id': 'royce',
                 'date': '8월 18일',
                 'time': '15:50 - 16:30',
-                'location': '201',
+                'location': '202',
                 'level': 2,
                 'desc': 'Python 2에서 3으로의 전환 작업의 경위를 상세히 소개하고, 시행착오 끝에 best practice라고 생각할만한 부분들을 제안합니다. 이 과정에서 파이썬의 encoding과 urllib에 대한 개념과 런타임 버전별 차이에 대해서 자세하게 이해하게 되어, 이를 정리하여 전달합니다.',
             },
@@ -966,7 +965,7 @@ session_categories = [
                 'id': 'iandmyhand',
                 'date': '8월 18일',
                 'time': '14:40 - 15:20',
-                'location': '201',
+                'location': '202',
                 'level': 2,
                 'desc': '본 발표에서는 실무에서 맞닥뜨렸던 다양한 문제들을 Django의 ORM을 최대한 활용하여 해결했던 방법들을 공유합니다. 예를 들어 Django ORM에서 제공하지 않는 custom function을 활용하는 방법, transaction을 정확히 다루는 방법, ORM을 써보려는 개발자들을 괴롭히는 다양한 group by 절 사용방법, 간단한 Performance Tuning 등을 다룹니다.',
             },
