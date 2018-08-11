@@ -106,7 +106,7 @@ sponsor_levels = [
 열정적인 개발자들이 많은 아이디어를 나누며 동료 개발자들과 즐겁게 네트워킹 하고 있습니다. Google에 관련된 기술과 개발툴들 컨텐츠에 집중되어 있지만 모든 개발 분야에 대해서도 자유롭게 열려있습니다. 배우고자 하는 열정이 가득한 개발자들의 커뮤니티에 여러분들을 초대합니다.
 GDG의 멤버가 되어주세요!
 Slack : http://slack.gdg.kr/
-Facebook : https://facebook.com/gdgkorea/"'''
+Facebook : https://facebook.com/gdgkorea/'''
             },
             {
                 'name': '아산나눔재단',
