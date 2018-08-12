@@ -42,7 +42,7 @@ if os.environ.get('TARGET') == 'production':
 
     try:
         create_response = doc_api.create_doc({
-            "test": (os.environ.get('TEST') !== None),
+            "test": (os.environ.get('TEST') is not None),
             "document_content": page,
             "name": "pyconkr-2018-booklet.pdf",
             "document_type": "pdf",
