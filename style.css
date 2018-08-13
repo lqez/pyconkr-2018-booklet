@@ -3,10 +3,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Mono:400');
 
 @page {
-  /*size: 5.5in 8.5in;  */
   size: 148mm 210mm;
-  margin: 60pt 60pt;
-  /*marks: crop;*/
+  margin: 56pt 50pt;
   marks: crop;
   prince-bleed: 3mm;
   prince-trim: 3mm;
@@ -17,6 +15,8 @@ img {
 }
 
 @page:right{ 
+  margin: 56pt 46pt 56pt 50pt;
+
   @bottom-right { 
     margin: 10pt 0 30pt 0;
     border-top: .25pt solid #666;
@@ -34,6 +34,8 @@ img {
 }
 
 @page:left {
+  margin: 56pt 50pt 56pt 46pt;
+
   @bottom-left { 
     margin: 10pt 0 30pt 0;
     border-top: .25pt solid #666;
@@ -129,7 +131,7 @@ h1 { font-size: 24pt; line-height: 1.3; }
 h2 { font-size: 16pt; line-height: 1.1; padding-top: 10pt; margin-bottom: 0pt;}
 h3 { font-size: 14pt; line-height: 1.1; margin-bottom: 0pt;}
 h4 { font-size: 12pt; line-height: 1.0; margin-bottom: 0pt; }
-p { font-size: 9pt; line-height: 1.5; text-align: justify; word-break: normal; letter-spacing: -0.25px;}
+p { font-size: 9pt; line-height: 1.5; text-align: justify; word-break: keep-all; letter-spacing: -0.25px;}
 pre {
   font-family: "Roboto Mono", monospace;
   letter-spacing: -0.25px;
@@ -203,7 +205,6 @@ a.xref:after {
 }
 
 @page:first {
-  size: 5.5in 8.5in;  
   margin: 0;
   background: linear-gradient(90deg, #491faf, #771592, #a20a77);
   background-position: center;
@@ -302,7 +303,6 @@ a.xref:after {
     width: 25%;
   }
 
-  size: 5.5in 8.5in;  
   background: linear-gradient(-90deg, #491faf, #771592, #a20a77);
   background-position: center;
   background-size: 104%;
@@ -350,7 +350,7 @@ a.xref:after {
 
 .sponsor img {
   width: 80%;
-  height: 56pt;
+  height: 100pt;
   margin: 0 10%;
 }
 
@@ -453,7 +453,7 @@ h3.level {
 }
 
 .keynote {
-  margin-bottom: 50pt;
+  margin-bottom: 30pt;
 }
 
 .keynote span {
@@ -548,6 +548,6 @@ h3.level {
 }
 
 .session p {
-  margin-left: 20px;
-  margin-bottom: 36px;
+  margin-left: 24px;
+  margin-bottom: 45px;
 }
