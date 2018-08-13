@@ -1,2 +1,2 @@
-Jinja2==2.10
-MarkupSafe==1.0
+Jinja2
+docraptor

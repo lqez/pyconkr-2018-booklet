@@ -31,6 +31,11 @@ page = template.render({
     'session_categories': preset.session_categories,
 })
 
+# Save result as html file
+with open("pyconkr-2018-booklet.html", "wb") as file
+    file.write(page.encode('utf-8'))
+
+# Build
 if os.environ.get('TARGET') == 'production':
     if not os.environ.get('DOCRAPTOR_APIKEY'):
         sys.exit('Please set DOCRAPTOR_APIKEY to bulid production pdf!')
@@ -50,9 +55,8 @@ if os.environ.get('TARGET') == 'production':
                 "baseurl": baseurl,
             },
         })
-        file = open("pyconkr-2018-booklet.pdf", "wb")
-        file.write(create_response)
-        file.close
+        with open("pyconkr-2018-booklet.pdf", "wb") as file
+            file.write(create_response)
         print("Done")
     except docraptor.rest.ApiException as error:
         print(error)
