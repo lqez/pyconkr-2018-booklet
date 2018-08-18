@@ -32,7 +32,7 @@ page = template.render({
 })
 
 # Save result as html file
-with open("pyconkr-2018-booklet.html", "wb") as file
+with open("pyconkr-2018-booklet.html", "wb") as file:
     file.write(page.encode('utf-8'))
 
 # Build
@@ -55,7 +55,7 @@ if os.environ.get('TARGET') == 'production':
                 "baseurl": baseurl,
             },
         })
-        with open("pyconkr-2018-booklet.pdf", "wb") as file
+        with open("pyconkr-2018-booklet.pdf", "wb") as file:
             file.write(create_response)
         print("Done")
     except docraptor.rest.ApiException as error:
