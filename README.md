@@ -1,7 +1,7 @@
 # pyconkr-2018-booklet
 
 This creates the program booklet of PyCon Korea 2018
-About this work: <https://speakerdeck.com/lqez/pycon-by-python>
+ - About this work: <https://speakerdeck.com/lqez/pycon-by-python>
 
 ## Requisites
 
